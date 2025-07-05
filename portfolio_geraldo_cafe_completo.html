@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Geraldo Café</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/59/Blue_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #1e293b;
+        }
+        .header {
+            background-color: #0f172a;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            color: white;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #3b82f6;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .header-subtitle {
+            font-size: 1.25rem;
+            color: #60a5fa;
+            margin-top: 0.5rem;
+        }
+        .linkedin-icon {
+            width: 32px;
+            height: 32px;
+            background-color: white;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .linkedin-icon img {
+            width: 20px;
+            height: 20px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2.5rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background-color: #6366f1;
+            z-index: 1;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.8rem;
+            top: 1.25rem;
+            width: 2px;
+            height: calc(100% - 1.25rem);
+            background-color: #cbd5e1;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        .timeline-item-content {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+        }
+        .timeline-item-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .certification-badge {
+            width: 100px;
+            height: auto;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .certification-badge:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <header class="w-full max-w-4xl header mb-10">
+            <div class="header-left">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEs_Qp2JS7Nhw/profile-displayphoto-scale_400_400/B4DZfbbXV4GkAg-/0/1751733089644?e=1756944000&v=beta&t=EqyCvK59aV4Lfm7HEas9wpMZTjVH8zl0SCNgQgWfBLA" alt="Profile Picture" class="profile-img">
+                <div>
+                    <h1 class="header-title">Geraldo Café</h1>
+                    <p class="header-subtitle">Senior Systems Development Analyst | Smart Grid | Atos | Tech Instructor | Microsoft Certified (3x) & AWS Certified</p>
+                </div>
+            </div>
+            <a href="https://www.linkedin.com/in/geraldocafe/" target="_blank" class="linkedin-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
+        </header>
+
+        <!-- About -->
+        <section id="about" class="w-full max-w-4xl bg-white p-8 rounded-2xl shadow-lg mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Sobre Mim</h2>
+            <p class="text-gray-700 leading-relaxed text-lg">
+                Olá! Sou um Analista de Desenvolvimento de Sistemas Sênior com vasta experiência em projetos de Smart Grid e forte atuação na Atos. Além da minha paixão por desenvolver soluções inovadoras, sou um instrutor tecnológico dedicado, compartilhando meu conhecimento e formando novos talentos na área de sistemas. Possuo tripla certificação Microsoft e sou certificado AWS, garantindo expertise tanto em tecnologias on-premise quanto em ambientes de nuvem. Minha jornada profissional é focada em impulsionar a inovação e o aprendizado contínuo.
+            </p>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="w-full max-w-4xl bg-white p-8 rounded-2xl shadow-lg mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Experiência Profissional</h2>
+            <div class="relative pl-4">
+                <div class="timeline-item">
+                    <div class="timeline-item-content">
+                        <h3 class="text-xl font-semibold text-gray-900">Systems Development Analyst</h3>
+                        <p class="text-blue-600 font-medium">Atos</p>
+                        <p class="text-gray-500 text-sm">Agosto de 2021 – O momento</p>
+                        <p class="text-gray-600 mt-2">Atuação em tempo integral em Campinas, São Paulo. Responsável por desenvolver e manter sistemas, com foco em soluções para Smart Grid. Contribuição para a arquitetura de software e otimização de processos, utilizando tecnologias avançadas para garantir a eficiência e escalabilidade das aplicações.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-content">
+                        <h3 class="text-xl font-semibold text-gray-900">Instrutor de Formação Profissional</h3>
+                        <p class="text-blue-600 font-medium">Escola Senai "Celso Charuri" - Unidade Sumaré</p>
+                        <p class="text-gray-500 text-sm">Agosto de 2023 – O momento</p>
+                        <p class="text-gray-600 mt-2">Professor de curso técnico de desenvolvimento de sistemas. Responsável por planejar e ministrar aulas, orientar projetos práticos e avaliar o desempenho dos alunos, preparando-os para o mercado de trabalho em TI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-content">
+                        <h3 class="text-xl font-semibold text-gray-900">Instrutor de Formação Profissional</h3>
+                        <p class="text-blue-600 font-medium">Escola SENAI Valinhos | SENAI São Paulo</p>
+                        <p class="text-gray-500 text-sm">Junho de 2022 – Julho de 2023</p>
+                        <p class="text-gray-600 mt-2">Atuação como instrutor técnico em desenvolvimento de sistemas, contribuindo para a formação de novos profissionais na área. Experiência em Valinhos, São Paulo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-content">
+                        <h3 class="text-xl font-semibold text-gray-900">Business Consultant</h3>
+                        <p class="text-blue-600 font-medium">DXC Technology</p>
+                        <p class="text-gray-500 text-sm">Outubro de 2019 – Agosto de 2021</p>
+                        <p class="text-gray-600 mt-2">Consultor de negócios com atuação em tempo integral em Campinas e Região. Envolvimento em projetos de consultoria, análise de requisitos e otimização de processos para diversos clientes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-content">
+                        <h3 class="text-xl font-semibold text-gray-900">Consultor técnico</h3>
+                        <p class="text-blue-600 font-medium">ITF-EDV Fröschl GmbH</p>
+                        <p class="text-gray-500 text-sm">Fevereiro de 2017 – Outubro de 2019</p>
+                        <p class="text-gray-600 mt-2">Analista de Suporte Técnico. Gerenciamento e suporte do sistema técnico de coleta e tratamento de dados da CPFL.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="w-full max-w-4xl bg-white p-8 rounded-2xl shadow-lg mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Certificações</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4 text-lg">
+                <li><span class="font-semibold">3x Microsoft Certified:</span> Expert em diversas tecnologias Microsoft, demonstrando profundo conhecimento e habilidades em desenvolvimento e administração de sistemas.</li>
+                <li><span class="font-semibold">AWS Certified:</span> Habilidade comprovada em computação em nuvem AWS, incluindo design, implantação e gerenciamento de aplicações escaláveis.</li>
+            </ul>
+            <div class="flex flex-wrap justify-center sm:justify-start gap-4 mt-4">
+                <img src="https://images.credly.com/size/680x680/images/73e4a58b-a8ef-41a3-a7db-9183dd269882/image.png" alt="Microsoft AZ-900" class="certification-badge">
+                <img src="https://hotmart.s3.amazonaws.com/product_pictures/6f2a3419-716c-49e3-ba32-388f98381dce/dp900logo.jpg" alt="Microsoft DP-900" class="certification-badge">
+                <img src="https://consultabd.wordpress.com/wp-content/uploads/2021/05/ai900_00.png" alt="Microsoft AI-900" class="certification-badge">
+                <img src="https://images.credly.com/size/340x340/images/2784d0d8-327c-406f-971e-9f0e15097003/image.png" alt="AWS Certification Badge" class="certification-badge">
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="w-full max-w-4xl bg-white p-8 rounded-2xl shadow-lg">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Contato</h2>
+            <p class="text-gray-700 mb-4 text-lg">Fique à vontade para entrar em contato comigo:</p>
+            <ul class="space-y-2 text-lg">
+                <li><span class="font-semibold">Email:</span> geraldocafe@yahoo.com.br</li>
+                <li><span class="font-semibold">LinkedIn:</span> <a href="https://www.linkedin.com/in/geraldocafe/" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/geraldocafe</a></li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-4xl text-center py-6 mt-10 text-gray-600 text-sm">
+            &copy; 2024 Geraldo Café. Todos os direitos reservados.
+        </footer>
+    </div>
+</body>
+</html>
